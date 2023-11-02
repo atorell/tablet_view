@@ -1,0 +1,281 @@
+/* fix skip to content */
+#skip-to-content{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: relative;
+    top: -40px;
+}
+
+#skip-to-content:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    border: solid black 2px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.list{
+    margin-left: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    margin-bottom: 20px;
+}
+
+/* make space between list items  */
+
+.large-container .container {
+    margin-bottom: 40px;
+    border: solid #153462 5px;
+    border-radius: 30px;
+    padding: 15px;
+    grid-column: 1/-1;
+} 
+
+.large-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #BAD1C2;
+    color: #153462;
+}
+
+/* a {
+    text-decoration: none;
+    color: #0077cc;
+} */
+
+header {
+    background-color: #153462;
+    animation: mymove 5s;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+@keyframes mymove {
+    0%   {top: 0px; background: #4FA095; width: 10%;}
+    100% {top: 200px; background: #153462; width: 100%;}
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #F6F6C9;
+    text-align: center;
+    padding: 30px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+nav a {
+    color: #153462;
+}
+
+nav a:hover {
+    border: solid #4FA095 3px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* how to make this work? */
+.current {
+    border: solid #153462 3px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figure figcaption {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.likes {
+    display: inline-block;
+}
+
+.food-pics{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.food-pics-pet{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){ 
+    .gif {
+        display: none;
+    }
+
+    header {
+        animation: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        font-size: 28px;
+    }
+
+    nav ul {
+        background-color: #F6F6C9;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 28px;
+    }
+
+    .large-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .tiny-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tiny-grid:nth-child(2) {
+        height: auto;
+    }
+
+    .container .description {
+        font-size: 16px;
+        align-self: center;
+    }
+
+    .container .list {
+        margin-left: 20px;
+    }
+
+    .container img.thumbnail {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .container .food-pics {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container .food-pics-pet {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .no-stretch {
+        align-self: center;
+    }
+  
+    .container .food-pics img {
+        flex: 1; 
+        max-width: 30%;
+    }
+
+    .list {
+        margin-left: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 32px; 
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        text-align: left;
+    }
+}
